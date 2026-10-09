@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
+import companyLogo from './assets/hero.png'
 import heroImage1 from './assets/images/photo-1565793298595-6a879b1d9492.jpg'
 import heroImage2 from './assets/images/photo-1504917595217-d4dc5ebe6122.jpg'
 import heroImage3 from './assets/images/photo-1513828583688-c52646db42da.jpg'
@@ -249,8 +250,7 @@ function App() {
       {/* ---------- header ---------- */}
       <header className={`header ${scrolled ? 'solid' : ''}`}>
         <a href="#top" className="brand" aria-label={COMPANY.name}>
-          <span className="brand-mark">I</span>
-          <span className="brand-text">IDHAYAN<small>INDUSTRIES</small></span>
+          <img className="brand-logo" src={companyLogo} alt="Idhayan Industries Private Limited" />
         </a>
         <nav className={`nav ${open ? 'open' : ''}`}>
           {NAV.map(([label, href]) => (
@@ -555,8 +555,7 @@ function App() {
         <div className="footer-grid">
           <div>
             <a href="#top" className="brand light">
-              <span className="brand-mark">I</span>
-              <span className="brand-text">IDHAYAN<small>INDUSTRIES</small></span>
+              <img className="brand-logo" src={companyLogo} alt="Idhayan Industries Private Limited" />
             </a>
             <p className="muted">Your Trusted Trading Partner for Steel, Wire and Industrial Materials</p>
             {(COMPANY.phone || COMPANY.email) && (
