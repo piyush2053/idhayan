@@ -1,26 +1,31 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
+import heroImage1 from './assets/images/photo-1565793298595-6a879b1d9492.jpg'
+import heroImage2 from './assets/images/photo-1504917595217-d4dc5ebe6122.jpg'
+import heroImage3 from './assets/images/photo-1513828583688-c52646db42da.jpg'
+import aboutImage from './assets/images/photo-1581091226825-a6a2a5aee158.jpg'
+import visionImage from './assets/images/photo-1581092918056-0c4c3acd3789.jpg'
+import facilityImage from './assets/images/photo-1518709268805-4e9042af9f23.jpg'
+import productImage2 from './assets/images/photo-1567789884554-0b844b597180.jpg'
+import productImage4 from './assets/images/photo-1581092160562-40aa08e78837.jpg'
 
 /* ------------------------------------------------------------------ */
 /*  EDIT HERE: saari images / text / contact details yahin se badlo   */
 /* ------------------------------------------------------------------ */
-const u = (id, w = 1600) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`
-
 const IMAGES = {
   hero: [
-    u('photo-1565793298595-6a879b1d9492'),
-    u('photo-1504917595217-d4dc5ebe6122'),
-    u('photo-1513828583688-c52646db42da'),
+    heroImage1,
+    heroImage2,
+    heroImage3,
   ],
-  about: u('photo-1581091226825-a6a2a5aee158', 1000),
-  vision: u('photo-1581092918056-0c4c3acd3789', 1000),
-  facility: u('photo-1518709268805-4e9042af9f23', 1600),
+  about: aboutImage,
+  vision: visionImage,
+  facility: facilityImage,
   products: [
-    u('photo-1518709268805-4e9042af9f23', 800),
-    u('photo-1567789884554-0b844b597180', 800),
-    u('photo-1504917595217-d4dc5ebe6122', 800),
-    u('photo-1581092160562-40aa08e78837', 800),
+    facilityImage,
+    productImage2,
+    heroImage2,
+    productImage4,
   ],
 }
 
