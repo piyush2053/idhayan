@@ -42,7 +42,7 @@ const COMPANY = {
 }
 
 const NAV = [
-  ['About', '#about'],
+  ['Company', '#about'],
   ['Products', '#products'],
   ['Facilities', '#facilities'],
   ['Leadership', '#leadership'],
@@ -51,9 +51,9 @@ const NAV = [
 ]
 
 const SLIDES = [
-  { title: 'Built on Precision,', accent: 'Driven by Trust', text: 'Industrial solutions from the heart of Madhya Pradesh.' },
-  { title: 'Engineered for', accent: 'Everyday Strength', text: 'Quality-first operations from Indore and Pithampur.' },
-  { title: 'Growing Together', accent: 'With Industry', text: 'Reliable supply, honest service, long-term partnerships.' },
+  { title: 'Strength in Steel,', accent: 'Built on Trust', text: 'Dependable industrial materials and supply solutions from Indore and Pithampur.' },
+  { title: 'A Better Standard', accent: 'For Industry', text: 'Quality-led sourcing, responsive service and reliable delivery for every order.' },
+  { title: 'Built for What’s', accent: 'Ahead', text: 'A focused team, strategically placed to help businesses keep moving.' },
 ]
 
 // TODO: apni asli product lines yahan likho (abhi placeholder hain)
@@ -156,7 +156,7 @@ function App() {
           {NAV.map(([label, href]) => (
             <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
           ))}
-          <a className="btn btn-sm" href="#contact" onClick={() => setOpen(false)}>Get In Touch</a>
+          <a className="btn btn-sm" href="#contact" onClick={() => setOpen(false)}>Get in touch <span>↗</span></a>
         </nav>
         <button className="burger" aria-label="Menu" onClick={() => setOpen(!open)}>
           <span /><span /><span />
@@ -178,8 +178,8 @@ function App() {
           </h1>
           <p className="hero-text">{SLIDES[slide].text}</p>
           <div className="hero-actions">
-            <a className="btn" href="#products">Our Products</a>
-            <a className="btn btn-ghost" href="#contact">Get In Touch</a>
+            <a className="btn" href="#products">Explore our products <span>→</span></a>
+            <a className="btn btn-ghost" href="#contact">Speak to our team <span>↗</span></a>
           </div>
         </div>
         <div className="dots">
@@ -208,7 +208,7 @@ function App() {
         </Reveal>
         <Reveal className="split-body">
           <p className="eyebrow">About Idhayan</p>
-          <h2>Leading with Vision &amp; Dedication</h2>
+          <h2>A trusted partner for industry</h2>
           <p>
             {COMPANY.legal} is a Madhya Pradesh based company registered in {COMPANY.since},
             operating from Indore with an additional facility in the Pithampur industrial belt.
@@ -230,7 +230,7 @@ function App() {
         </Reveal>
         <Reveal className="split-body">
           <p className="eyebrow">Our Approach</p>
-          <h2>Pioneering Better Ways of Working</h2>
+          <h2>Reliable supply. Relationships built to last.</h2>
           <p>
             We work closely with engineers, buyers and technical teams to understand the
             requirement first, then deliver with precision and speed. Responsible,
@@ -238,8 +238,8 @@ function App() {
           </p>
           <ul className="ticks">
             <li>Quality-first sourcing and processing</li>
-            <li>Strategic locations in Indore &amp; Pithampur</li>
-            <li>Clear communication, fair pricing</li>
+            <li>Strategic locations in Indore and Pithampur</li>
+            <li>Clear communication and dependable service</li>
           </ul>
         </Reveal>
       </section>
@@ -249,7 +249,7 @@ function App() {
         <div><b><Counter to={years} suffix="+" /></b><span>Years Since<br />Registration</span></div>
         <div><b><Counter to={2} /></b><span>Operating<br />Locations</span></div>
         <div><b><Counter to={3} /></b><span>Directors &amp;<br />Leaders</span></div>
-        <div><b><Counter to={PRODUCTS.length} /></b><span>Core Product<br />Lines</span></div>
+        <div><b><Counter to={PRODUCTS.length} /></b><span>Core Product<br />Categories</span></div>
       </section>
 
       {/* ---------- products ---------- */}
@@ -258,7 +258,7 @@ function App() {
           <div className="section-head">
             <div>
               <p className="eyebrow">What We Offer</p>
-              <h2>Engineered for Strength,<br />Designed for Excellence</h2>
+              <h2>Materials and service<br />that move industry forward</h2>
             </div>
             <div className="arrows">
               <button onClick={() => scrollTrack(-1)} aria-label="Previous">←</button>
@@ -273,7 +273,7 @@ function App() {
               <div className="card-body">
                 <h3>{p.name}</h3>
                 <p>{p.text}</p>
-                <a className="link-arrow" href="#contact">Enquire <span>→</span></a>
+                <a className="link-arrow" href="#contact">Discuss your requirement <span>→</span></a>
               </div>
             </article>
           ))}
@@ -286,7 +286,7 @@ function App() {
         <div className="facility-shade" />
         <Reveal className="facility-inner">
           <p className="eyebrow light">Our Facilities</p>
-          <h2>Two Locations. One Standard.</h2>
+          <h2>Strategically located to serve you.</h2>
           <div className="facility-grid">
             <div>
               <h4>Registered Office · Indore</h4>
@@ -304,7 +304,7 @@ function App() {
       <section id="leadership" className="section">
         <Reveal>
           <p className="eyebrow">Leadership</p>
-          <h2>The People Behind Idhayan</h2>
+          <h2>Leadership rooted in experience</h2>
         </Reveal>
         <div className="leaders">
           {LEADERS.map((l) => (
@@ -321,7 +321,7 @@ function App() {
       <section id="compliance" className="section tint">
         <Reveal>
           <p className="eyebrow">Compliance</p>
-          <h2>Registered &amp; Accountable</h2>
+          <h2>Registered and accountable</h2>
         </Reveal>
         <div className="facts">
           <div><span>Legal Name</span><b>{COMPANY.legal}</b></div>
@@ -337,8 +337,8 @@ function App() {
       <section id="contact" className="contact">
         <Reveal className="contact-inner">
           <p className="eyebrow light">Get In Touch</p>
-          <h2>Let’s Build Something Together</h2>
-          <p>Tell us what you need — we’ll get back to you quickly.</p>
+          <h2>Let’s build something together</h2>
+          <p>Tell us what your business needs. Our team will be in touch.</p>
           <form
             className="form"
             onSubmit={(e) => {
@@ -351,7 +351,7 @@ function App() {
             <input required type="email" placeholder="Email" />
             <input placeholder="Phone" />
             <textarea required rows="4" placeholder="Your requirement" />
-            <button className="btn" type="submit">Send Enquiry</button>
+            <button className="btn" type="submit">Send enquiry <span>→</span></button>
           </form>
         </Reveal>
       </section>
